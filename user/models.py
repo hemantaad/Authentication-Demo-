@@ -48,7 +48,8 @@ class User(AbstractBaseUser):
     )
     user_type = models.CharField(
         max_length=1,
-        choices=USER_TYPE
+        choices=USER_TYPE,
+        null=True
     )
     name = models.CharField(max_length=200)
     is_active = models.BooleanField(default=True)
